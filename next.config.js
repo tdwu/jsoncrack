@@ -7,6 +7,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
  * @type {import('next').NextConfig}
  */
 const config = {
+  //assetPrefix: "/console/jsonView",
+  //basePath: "/console/jsonView",
   output: "export",
   reactStrictMode: false,
   productionBrowserSourceMaps: true,

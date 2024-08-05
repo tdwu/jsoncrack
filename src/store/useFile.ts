@@ -142,8 +142,10 @@ const useFile = create<FileStates & JsonActions>()((set, get) => ({
   },
   checkEditorSession: (url, widget) => {
     if (url && typeof url === "string") {
-      if (isURL(url)) return get().fetchUrl(url);
-      return get().fetchFile(url);
+      url = decodeURIComponent(url);
+      return get().fetchUrl(url);
+      // if (isURL(url)) return get().fetchUrl(url);
+      // return get().fetchFile(url);
     }
 
     let contents = defaultJson;

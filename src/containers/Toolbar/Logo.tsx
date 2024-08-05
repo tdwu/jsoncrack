@@ -20,7 +20,7 @@ export const Logo = () => {
   if (!logoURL) return null;
 
   return (
-    <Styles.StyledToolElement title="JSON Crack">
+    <Styles.StyledToolElement title="JSON Editor">
       <Flex gap="xs" align="center" justify="center">
         <JSONCrackLogo fontSize="1.2em" href={logoURL} target={isIframe() ? "_blank" : "_parent"} />
       </Flex>

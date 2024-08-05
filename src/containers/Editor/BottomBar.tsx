@@ -219,7 +219,7 @@ export const BottomBar = () => {
             </Flex>
           )}
         </StyledBottomBarItem>
-        {(data?.owner_email === user?.email || (!data && user)) && (
+        {/* {(data?.owner_email === user?.email || (!data && user)) && (
           <StyledBottomBarItem onClick={handleSaveJson} disabled={isUpdating || error}>
             {hasChanges || !user ? <AiOutlineCloudUpload /> : <AiOutlineCloudSync />}
             {hasChanges || !user ? (query?.json ? "Unsaved Changes" : "Save to Cloud") : "Saved"}
@@ -230,7 +230,7 @@ export const BottomBar = () => {
             {isPrivate ? <AiOutlineLock /> : <AiOutlineUnlock />}
             {isPrivate ? "Private" : "Public"}
           </StyledBottomBarItem>
-        )}
+        )} */}
         <StyledBottomBarItem
           onClick={() => setVisible("share")(true)}
           disabled={isPrivate || !data}
@@ -269,10 +269,10 @@ export const BottomBar = () => {
 
       <StyledRight>
         <StyledBottomBarItem>Nodes: {nodeCount}</StyledBottomBarItem>
-        <StyledBottomBarItem onClick={() => setVisible("review")(true)}>
+        {/* <StyledBottomBarItem onClick={() => setVisible("review")(true)}>
           <VscFeedback />
           Feedback
-        </StyledBottomBarItem>
+        </StyledBottomBarItem> */}
       </StyledRight>
     </StyledBottomBar>
   );

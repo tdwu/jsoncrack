@@ -48,7 +48,7 @@ export const Toolbar = ({ isWidget = false }: ToolbarProps) => {
       {isWidget && <Logo />}
       {!isWidget && (
         <Group gap="xs" justify="left" w="100%" style={{ flexWrap: "nowrap" }}>
-          <Styles.StyledToolElement title="JSON Crack">
+          <Styles.StyledToolElement title="JSON Editor">
             <Flex gap="xs" align="center" justify="center">
               <JSONCrackLogo fontSize="1.2em" />
             </Flex>
@@ -74,13 +74,13 @@ export const Toolbar = ({ isWidget = false }: ToolbarProps) => {
           <FileMenu />
           <ViewMenu />
           <ToolsMenu />
-          <Styles.StyledToolElement title="Cloud" onClick={() => setVisible("cloud")(true)}>
+          {/* <Styles.StyledToolElement title="Cloud" onClick={() => setVisible("cloud")(true)}>
             Cloud
-          </Styles.StyledToolElement>
+          </Styles.StyledToolElement> */}
         </Group>
       )}
       <Group gap="xs" justify="right" w="100%" style={{ flexWrap: "nowrap" }}>
-        {!isWidget && (
+        {/* {!isWidget && (
           <Styles.StyledToolElement
             onClick={() => {
               setSeenPremium(true);
@@ -107,7 +107,7 @@ export const Toolbar = ({ isWidget = false }: ToolbarProps) => {
               </Text>
             </Indicator>
           </Styles.StyledToolElement>
-        )}
+        )} */}
 
         <SearchInput />
         {!isWidget && (
@@ -119,7 +119,7 @@ export const Toolbar = ({ isWidget = false }: ToolbarProps) => {
               <FiDownload size="18" />
             </Styles.StyledToolElement>
             <ZoomMenu />
-            <AccountMenu />
+            {/* <AccountMenu /> */}
             <OptionsMenu />
             <Styles.StyledToolElement
               title="Fullscreen"

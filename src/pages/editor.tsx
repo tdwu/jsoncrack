@@ -58,7 +58,7 @@ const EditorPage = () => {
   return (
     <>
       <Head>
-        <title>Editor | JSON Crack</title>
+        <title>JSON Editor</title>
         <meta name="description" content={metaDescription} key="description" />
         <meta property="og:description" content={metaDescription} key="ogdescription" />
         <meta name="twitter:description" content={metaDescription} key="twdescription" />{" "}

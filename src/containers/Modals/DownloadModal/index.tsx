@@ -65,7 +65,7 @@ function downloadURI(uri: string, name: string) {
 export const DownloadModal = ({ opened, onClose }: ModalProps) => {
   const [extension, setExtension] = React.useState(Extensions.PNG);
   const [fileDetails, setFileDetails] = React.useState({
-    filename: "jsoncrack.com",
+    filename: "临时图片",
     backgroundColor: "#FFFFFF",
     quality: 1,
   });
