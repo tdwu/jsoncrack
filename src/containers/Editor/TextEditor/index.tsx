@@ -8,8 +8,8 @@ import useFile from "src/store/useFile";
 loader.config({
   paths: {
     // vs: "https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.0/min/vs",
-    // vs: "/console/monaco-editor/0.34.0/min/vs",
-    vs: "http://localhost:17482/console/monaco-editor/0.34.0/min/vs",
+     vs: "/console/monaco-editor/0.34.0/min/vs",
+    // vs: "http://localhost:17482/console/monaco-editor/0.34.0/min/vs",
   },
 });
 

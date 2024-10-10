@@ -45,7 +45,7 @@ const StyledEditorWrapper = styled.div<{ $widget: boolean; $showRulers: boolean 
   `};
 
   .jsoncrack-space {
-    cursor: url("/assets/cursor.svg"), auto;
+    
   }
 
   :active {
@@ -198,7 +198,7 @@ export const GraphView = ({ isWidget = false }: GraphProps) => {
         >
           <GraphCanvas isWidget={isWidget} />
         </Space>
-        {!isWidget && (
+        {/* {!isWidget && (
           <Dialog
             opened={!isDialogClosed}
             size="lg"
@@ -228,7 +228,7 @@ export const GraphView = ({ isWidget = false }: GraphProps) => {
               </Button>
             </Group>
           </Dialog>
-        )}
+        )} */}
       </StyledEditorWrapper>
     </>
   );
