@@ -17,6 +17,7 @@ const config = {
   reactStrictMode: false,
   // 关闭source map
   productionBrowserSourceMaps: false,
+  compress:false,// 单独指定CompressionPlugin
   compiler: {
     styledComponents: true,
   },
@@ -29,27 +30,27 @@ const config = {
     // 使用自定义插件删除 .map 文件
     config.plugins.push(new RemoveMapFilesPlugin());
     
-    // 将 public 文件夹中的文件添加到 Webpack 处理的资源中
-    config.plugins.push(
-      new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: path.resolve(__dirname, 'public'),  // 指定 public 文件夹路径
-            to: path.resolve(__dirname, 'out/public'),  // 将 public 文件夹的内容复制到 out 文件夹
-            globOptions: {
-              ignore: ['**/*.gz'],  // 避免重复压缩 .gz 文件
-            },
-          },
-        ],
-      })
-    );
+    // // 将 public 文件夹中的文件添加到 Webpack 处理的资源中
+    // config.plugins.push(
+    //   new CopyWebpackPlugin({
+    //     patterns: [
+    //       {
+    //         from: path.resolve(__dirname, 'public'),  // 指定 public 文件夹路径
+    //         to: path.resolve(__dirname, 'out/public'),  // 将 public 文件夹的内容复制到 out 文件夹
+    //         globOptions: {
+    //           ignore: ['**/*.gz'],  // 避免重复压缩 .gz 文件
+    //         },
+    //       },
+    //     ],
+    //   })
+    // // );
     config.plugins.push(
       new CompressionPlugin({
         filename: '[path][base].gz',
         algorithm: 'gzip',
-        test: /\.(js|css|html|svg)$/, // 只压缩 JS、CSS、HTML 和 SVG 文件
+        test: /\.(js|css|html|svg|png|jpg)$/, // 只压缩 JS、CSS、HTML 和 SVG 文件
         threshold: 8192, // 只处理大于 8k 的文件
-        minRatio: 0.8,  // 只有压缩比率小于 0.8 时才生成 gzip 文件
+        minRatio: 0.8,  // 只有压缩比率小于 0.8 时才生成 gzip 文件  
       }));
     return config;
   },
