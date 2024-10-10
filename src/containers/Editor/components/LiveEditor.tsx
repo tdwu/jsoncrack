@@ -9,8 +9,7 @@ const StyledLiveEditor = styled.div`
   position: relative;
   height: 100%;
   background: ${({ theme }) => theme.GRID_BG_COLOR};
-  overflow: auto;
-  cursor: url("/assets/cursor.svg"), auto;
+  overflow: auto; 
 
   & > ul {
     margin-top: 0 !important;

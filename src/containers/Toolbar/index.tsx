@@ -62,7 +62,7 @@ export const Toolbar = ({ isWidget = false }: ToolbarProps) => {
       {isWidget && <Logo />}
       {!isWidget && (
         <Group gap="xs" justify="left" w="100%" style={{ flexWrap: "nowrap" }}>
-          <StyledToolElement title="JSON Crack">
+          <StyledToolElement title="JSON Editor">
             <Flex gap="xs" align="center" justify="center">
               <JSONCrackLogo fontSize="0.8rem" hideLogo />
             </Flex>
@@ -91,7 +91,7 @@ export const Toolbar = ({ isWidget = false }: ToolbarProps) => {
         </Group>
       )}
       <Group gap="xs" justify="right" w="100%" style={{ flexWrap: "nowrap" }}>
-        {!isWidget && (
+        {/* {!isWidget && (
           <StyledToolElement onClick={() => setVisible("upgrade")(true)} $highlight>
             <Flex align="center" gap="6">
               <LuCrown size="16" />
@@ -100,7 +100,7 @@ export const Toolbar = ({ isWidget = false }: ToolbarProps) => {
               </Text>
             </Flex>
           </StyledToolElement>
-        )}
+        )} */}
 
         <SearchInput />
         {!isWidget && (
@@ -109,7 +109,7 @@ export const Toolbar = ({ isWidget = false }: ToolbarProps) => {
               <FiDownload size="18" />
             </StyledToolElement>
             <ZoomMenu />
-            <AccountMenu />
+            {/* <AccountMenu /> */}
             <OptionsMenu />
             <StyledToolElement title="Fullscreen" $hide={isWidget} onClick={fullscreenBrowser}>
               <AiOutlineFullscreen size="18" />

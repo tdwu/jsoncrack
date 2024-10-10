@@ -59,9 +59,9 @@ const EditorPage = () => {
     <>
       <NextSeo
         {...SEO}
-        title="Editor | JSON Crack"
-        description="JSON Crack Editor is a tool for visualizing into graphs, analyzing, editing, formatting, querying, transforming and validating JSON, CSV, YAML, XML, and more."
-        canonical="https://jsoncrack.com/editor"
+        title="Editor | JSON Editor"
+        description="JSON Editor is a tool for visualizing into graphs, analyzing, editing, formatting, querying, transforming and validating JSON, CSV, YAML, XML, and more."
+ 
       />
       <ThemeProvider theme={darkmodeEnabled ? darkTheme : lightTheme}>
         <QueryClientProvider client={queryClient}>

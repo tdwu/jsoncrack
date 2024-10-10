@@ -179,6 +179,7 @@ const useFile = create<FileStates & JsonActions>()((set, get) => ({
   },
   checkEditorSession: (url, widget) => {
     if (url && typeof url === "string") {
+      url = decodeURIComponent(url);
       if (isURL(url)) return get().fetchUrl(url);
     }
 

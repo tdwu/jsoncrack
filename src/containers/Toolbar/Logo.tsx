@@ -4,7 +4,7 @@ import { StyledToolElement } from "./styles";
 
 export const Logo = () => {
   return (
-    <StyledToolElement title="JSON Crack">
+    <StyledToolElement title="JSON Editor">
       <JSONCrackLogo fontSize="1.2rem" hideText />
     </StyledToolElement>
   );

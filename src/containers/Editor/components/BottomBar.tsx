@@ -95,7 +95,7 @@ export const BottomBar = () => {
   };
 
   React.useEffect(() => {
-    if (data?.name) window.document.title = `${data.name} | JSON Crack`;
+    if (data?.name) window.document.title = `${data.name} | JSON Editor`;
   }, [data]);
 
   return (
@@ -145,12 +145,12 @@ export const BottomBar = () => {
 
       <StyledRight>
         <StyledBottomBarItem>Nodes: {nodeCount}</StyledBottomBarItem>
-        <Link href="https://github.com/AykutSarac/jsoncrack.com/discussions" target="_blank">
+        {/* <Link href="https://github.com/AykutSarac/jsoncrack.com/discussions" target="_blank">
           <StyledBottomBarItem>
             <VscFeedback />
             Feedback
           </StyledBottomBarItem>
-        </Link>
+        </Link> */}
       </StyledRight>
     </StyledBottomBar>
   );

@@ -42,8 +42,7 @@ const StyledEditorWrapper = styled.div<{ $widget: boolean; $showRulers: boolean 
       20px 20px;
   `};
 
-  .jsoncrack-space {
-    cursor: url("/assets/cursor.svg"), auto;
+  .jsoncrack-space { 
   }
 
   :active {
@@ -186,7 +185,7 @@ export const GraphView = ({ isWidget = false }: GraphProps) => {
           onContextMenu={e => e.preventDefault()}
           treatTwoFingerTrackPadGesturesLikeTouch={gesturesEnabled}
           pollForElementResizing
-          className="jsoncrack-space"
+          className="jsoneditor-space"
         >
           <GraphCanvas isWidget={isWidget} />
         </Space>
